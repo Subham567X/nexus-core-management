@@ -1,0 +1,33 @@
+--- NEXUS CORE LIVE DEPLOYMENT GUIDE (HOSTINGER) ---
+
+FOLLOW THESE STEPS TO MAKE YOUR APP LIVE:
+
+STEP 1: ZIP YOUR PROJECT
+- Select all files in this folder (api, css, js, index.html, dashboard.php, etc.)
+- Right-click -> Compress to ZIP file. Name it 'nexus.zip'.
+
+STEP 2: UPLOAD TO HOSTINGER
+- Log in to Hostinger hPanel.
+- Go to 'File Manager' -> 'public_html'.
+- Upload 'nexus.zip'.
+- Right-click 'nexus.zip' -> Extract.
+
+STEP 3: CREATE DATABASE
+- Go to Hostinger 'MySQL Databases'.
+- Create DB: 'nexus', User: 'admin', and a Password.
+- NOTE DOWN THE FULL NAMES (e.g., u123456789_nexus).
+
+STEP 4: IMPORT DATA
+- Open 'phpMyAdmin' in Hostinger.
+- Click 'Import' -> Choose 'database.sql' -> Go.
+- Click 'Import' -> Choose 'nexus_seed.sql' -> Go.
+
+STEP 5: UPDATE CONFIG
+- In Hostinger File Manager, open 'api/config/database.php'.
+- Put your FULL Hostinger DB name, Username, and Password in the code.
+
+STEP 6: FIX LOGIN REDIRECT
+- In Hostinger File Manager, open 'js/script.js'.
+- Find 'dashboard.html' and change it to 'dashboard.php'.
+
+DONE! YOUR APP IS NOW LIVE ON YOUR DOMAIN.
